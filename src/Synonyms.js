@@ -1,5 +1,4 @@
 export default function Synonyms(props) {
-  console.log(props);
   if (props.synonyms) {
     return (
       <ul className="Synonyms">
