@@ -33,8 +33,8 @@ export default function Dictionary() {
           />
           <input type="submit" value="Search" />
         </form>
-        <Results data={results} />
       </div>
+      <Results data={results} />
     </div>
   );
 }

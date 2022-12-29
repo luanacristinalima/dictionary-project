@@ -1,4 +1,5 @@
-.App {
+.App .App-header,
+footer {
   text-align: center;
   margin: 100px 0;
 }

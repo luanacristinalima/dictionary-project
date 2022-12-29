@@ -1,7 +1,14 @@
+import React, { useState } from "react";
 import Meaning from "./Meaning";
 import Phonetics from "./Phonetics";
 
 export default function Results(props) {
+  const [trigger, setTrigger] = useState(0);
+
+  function handleOpen(index) {
+    setTrigger(index);
+  }
+
   if (props.data) {
     return (
       <div className="Results">
@@ -15,9 +22,14 @@ export default function Results(props) {
         })}
         {props.data.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
-              <Meaning meaning={meaning} />
-            </div>
+            <span key={index}>
+              <Meaning
+                meaning={meaning}
+                trigger={trigger}
+                handleOpen={() => handleOpen(index)}
+                index={index}
+              />
+            </span>
           );
         })}
       </div>
