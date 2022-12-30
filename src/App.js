@@ -8,7 +8,7 @@ export default function App() {
         <h1>Dictionary</h1>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultWord="flower" />
       </main>
       <footer className="mt-5">
         <a
