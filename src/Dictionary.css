@@ -59,9 +59,10 @@
 .Dictionary .Synonyms li {
   display: inline-block;
   margin-bottom: 10px;
-  margin-right: 15px;
-  border: #9ec4ca 1px solid;
-  padding: 5px 20px;
+  margin-right: 5px;
+  border: #9ec4ca 2px solid;
+  padding: 1px 20px;
   border-radius: 25px;
   font-weight: 600;
+  color: rgba(33, 37, 41, 0.9);
 }
