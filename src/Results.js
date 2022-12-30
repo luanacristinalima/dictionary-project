@@ -26,7 +26,7 @@ export default function Results(props) {
           </div>
         </div>
 
-        <div className="container meaning-content">
+        <div className="container wrap">
           {props.data.meanings.map(function (meaning, index) {
             return (
               <span key={index}>

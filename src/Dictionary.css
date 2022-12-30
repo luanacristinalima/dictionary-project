@@ -9,6 +9,8 @@
 
 .Dictionary .results-word {
   background-color: #9ec4ca;
+}
+.Dictionary h2 {
   font-family: "Playfair Display", serif;
 }
 
@@ -41,15 +43,15 @@
   color: #fdf4c8;
 }
 
-.Dictionary .meaning-content ol li::marker {
+.Dictionary .wrap ol li::marker {
   font-family: "Inter", sans-serif;
   font-weight: 600;
 }
 
-.Dictionary .meaning-content {
-  padding-bottom: 15px;
+.Dictionary .wrap {
   background-color: #fdf4c8;
   border-radius: 15px;
+  padding: 20px;
 }
 
 .Dictionary .Synonyms {
