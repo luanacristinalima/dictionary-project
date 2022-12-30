@@ -1,6 +1,6 @@
 export default function Definition(props) {
   return (
-    <div className="Definition">
+    <span className="Definition">
       {props.meaning.map(function (definition, index) {
         return (
           <div key={index}>
@@ -12,6 +12,6 @@ export default function Definition(props) {
           </div>
         );
       })}
-    </div>
+    </span>
   );
 }
