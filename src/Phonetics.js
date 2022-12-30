@@ -2,9 +2,11 @@ import PhoneticsAudio from "./PhoneticsAudio";
 
 export default function Phonetics(props) {
   return (
-    <div className="Phonetics">
-      <PhoneticsAudio audio={props.phonetic.audio} />
+    <span className="Phonetics">
       {props.phonetic.text}
-    </div>
+      <span>
+        <PhoneticsAudio audio={props.phonetic.audio} />
+      </span>
+    </span>
   );
 }

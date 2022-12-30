@@ -1,5 +1,14 @@
 .App .App-header,
 footer {
   text-align: center;
-  margin: 100px 0;
+  margin: 20px 0;
+  font-family: "Playfair Display", serif;
+}
+
+footer a {
+  color: #212529;
+}
+
+footer a:hover {
+  color: #fdf4c8;
 }

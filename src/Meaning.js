@@ -14,7 +14,7 @@ export default function Meaning(props) {
   return (
     <span className="Meaning">
       {props.selected && (
-        <div className="meaning-content">
+        <div>
           <Definition meaning={meanings} />
           <Synonyms synonyms={synonyms} />
         </div>

@@ -1,17 +1,16 @@
 export default function Definition(props) {
   return (
-    <span className="Definition">
+    <ol className="Definition">
       {props.meaning.map(function (definition, index) {
         return (
           <div key={index}>
-            <p>
-              {definition.definition}
-              <br />
+            <li>{definition.definition}</li>
+            <p className="mt-2">
               <em>{definition.example}</em>
             </p>
           </div>
         );
       })}
-    </span>
+    </ol>
   );
 }

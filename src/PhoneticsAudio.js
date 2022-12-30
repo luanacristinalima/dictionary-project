@@ -13,12 +13,12 @@ export default function PhoneticsAudio(props) {
             cx="30"
             cy="30"
             r="30"
-            fill="#000"
+            fill="#fdf4c8"
             style={{ cursor: "pointer" }}
           ></circle>
           <polygon
             points="22.199990213521364,17.000009786478635 22.199990213521364,42.999990213521365 44.29998532028205,30.00003914591454 44.29998532028205,29.99996085408546"
-            fill="#fff"
+            fill="#9ec4ca"
             style={{ cursor: "pointer" }}
           ></polygon>
         </svg>

@@ -13,39 +13,49 @@ export default function Results(props) {
   if (props.data) {
     return (
       <div className="Results">
-        <h2 className="text-capitalize">{props.data.word}</h2>
-        {props.data.phonetics.map(function (phonetic, index) {
-          return (
-            <div key={index}>
-              <Phonetics phonetic={phonetic} />
-            </div>
-          );
-        })}
-        {props.data.meanings.map(function (meaning, index) {
-          return (
-            <span key={index}>
-              <button
-                className="btn btn-primary meaning-button"
-                onClick={() => setButtonSelected(index)}
-              >
-                {meaning.partOfSpeech}
-              </button>
-            </span>
-          );
-        })}
-        {props.data.meanings.map(function (meaning, index) {
-          return (
-            <span key={index}>
-              <Meaning
-                meaning={meaning}
-                trigger={trigger}
-                handleOpen={() => handleOpen(index)}
-                index={index}
-                selected={buttonSelected === index}
-              />
-            </span>
-          );
-        })}
+        <div className="results-word">
+          <div className="container">
+            <h2 className="text-capitalize">{props.data.word}</h2>
+            {props.data.phonetics.map(function (phonetic, index) {
+              return (
+                <span key={index}>
+                  <Phonetics phonetic={phonetic} />
+                </span>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="container meaning-content">
+          {props.data.meanings.map(function (meaning, index) {
+            return (
+              <span key={index}>
+                <button
+                  className={`meaning-button ${
+                    buttonSelected === index ? "active" : ""
+                  }`}
+                  onClick={() => setButtonSelected(index)}
+                >
+                  {meaning.partOfSpeech}
+                </button>
+              </span>
+            );
+          })}
+
+          {props.data.meanings.map(function (meaning, index) {
+            return (
+              <span key={index}>
+                <Meaning
+                  meaning={meaning}
+                  trigger={trigger}
+                  handleOpen={() => handleOpen(index)}
+                  index={index}
+                  selected={buttonSelected === index}
+                />
+              </span>
+            );
+          })}
+        </div>
       </div>
     );
   } else {
